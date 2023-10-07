@@ -17,29 +17,22 @@ class EquiposController {
     Buscar(equipo){
         var id = + equipo;
         var search = equiposBD.findIndex(u => u.id == id)
-        var res = "El id " + id + " corresponde al equipo " + equiposBD[search].nombre;
+        var res = "El id " + id + " corresponde al equipo " + equiposBD[search].nombre + " integrado por " + equiposBD[search].integrantes;
         return(res);
       }
 
-//Para Buscar los Integrantes de un equipo según su nombre    
-    Buscarint(equipo){
-        var nombre = + equipo;
-        var search = equiposBD.findIndex(u => u.nombre == nombre)
-        var res = "Los integrantes del equipo " + nombre + " son: " + equiposBD[search].integrantes;
-        return(res);
-  }
 
 //Para Modificar los datos de algún equipo  
-Actualizar(equipo , newEquipo){
+    Modificar(equipo , newEquipo){
         var id = + equipo;
         var search = equiposBD.findIndex(u => u.id == id)
         if (search == "-1" ){
           console.log("El equipo con id " + id + " no existe");
         }else if(equiposBD[search].id == id){ 
-          console.log("El equipo con id "+ id + "sera actualizado");
+          console.log("El equipo con id "+ id + "se modificará");
           console.log(equiposBD[search]);
           equiposBD[search]= newEquipo;
-          console.log("El equipo ha sido actualizado");
+          console.log("El equipo ha sido modificado");
           console.log(equiposBD[search]);
         }
       }
@@ -56,6 +49,6 @@ Actualizar(equipo , newEquipo){
         }
       }
     } 
-
+    
 
 module.exports = new EquiposController();

@@ -27,8 +27,8 @@ router.get("/:nombre", function(req, res, next) {
 });
 
 //Modificar un Equipo
-router.patch("/:id", function(req, res, next) {
-  res.send(EquiposController.Actualizar(req.params.id , req.body));
+router.put("/:id", function(req, res, next) {
+  res.send(EquiposController.Modificar(req.params.id , req.body));
   
 });
 
@@ -36,5 +36,6 @@ router.patch("/:id", function(req, res, next) {
 router.delete("/:id", function(req, res, next) {
   res.send(EquiposController.Eliminar(req.params.id));
 });
+
 
 module.exports = router;

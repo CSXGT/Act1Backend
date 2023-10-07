@@ -23,4 +23,16 @@ router.patch("/:id", function(req, res, next) {
   
 });
 
+//Mostrar
+router.get('/equiposPorCategoria', (req, res) => {
+  const equiposPorCategoria = {};
+
+  categoriaBD.forEach(categoria => {
+      equiposPorCategoria[categoria.nombre] = equiposBD.filter(equipo => equipo.categoria_id.includes(categoria.id));
+  });
+
+  res.json(equiposPorCategoria);
+});
+
+
 module.exports = router;
