@@ -1,9 +1,10 @@
 var express = require('express');
 var router = express.Router();
+var ModalidadController = require("../controllers/modalidad.c");
 
-/* GET users listing. */
+/* GET modalidad listing. */
 router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+  res.send(ModalidadController.todos());
 });
 
 module.exports = router;

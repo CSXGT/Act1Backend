@@ -28,8 +28,8 @@ class PatrocinantesController {
     uno(id){
 
     }
-    ingresar(id){
-
+    ingresar(patrocinantes){
+        
     }
 }
 
