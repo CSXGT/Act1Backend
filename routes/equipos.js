@@ -3,7 +3,7 @@ const app = require('../app.js');
 const equipos = require('../controllers/equipos.c');
 var router = express.Router();
 var EquiposController = require("../controllers/equipos.c");
-const { equiposBD } = require('../models/models.js');
+const { equiposBD } = require('../models/modelos.js');
 
 //Mostrar Equipos
 router.get('/', function(req, res, next) {

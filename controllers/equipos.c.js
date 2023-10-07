@@ -1,4 +1,4 @@
-const {equiposBD} = require ("../models/models");
+const {equiposBD} = require ("../models/modelos");
 
 class EquiposController {
 

@@ -125,6 +125,66 @@ var equiposBD = [
         categoria_id: [3],
         modalidad_id: ["tos3"]
     }
+],patrocinantesBD = [
+    {
+        id:"111",
+        nombre:"Universidad Valle del Momboy",
+    },
+    {
+        id:"222",
+        nombre:"Makroval",
+    },
+    {
+        id:"333",
+        nombre:"Kel",
+    },
+    {
+        id:"444",
+        nombre:"Ávila",
+    },
+    {
+        id:"555",
+        nombre:"Salepoint Software",
+    }
+], modalidadBD = [
+    {
+        id: 1,
+        nombre:"Batalla de Robots"
+    },
+    {
+        id: 2,
+        nombre:"Vehículos Autónomos",
+    },
+    {
+        id: 3,
+        nombre:"Soluciones Industriales",
+    }
+], categoriaBD = [
+    {
+        id:"sum1",
+        nombre:"Sumo",
+        modalidad_id: 1
+    },
+    {
+        id:"inc1",
+        nombre:"Incapacidad",
+        modalidad_id: 1
+    },
+    {
+        id:"seg2",
+        nombre:"Seguidor de Línea",
+        modalidad_id: 2
+    },
+    {
+        id:"rec2",
+        nombre:"Recolección de Objetos",
+        modalidad_id: 2
+    },
+    {
+        id:"tos3",
+        nombre:"Tostador de Maíz",
+        modalidad_id: 3
+    }
 ]
 
-module.exports = {equiposBD};
+module.exports = {equiposBD, patrocinantesBD, modalidadBD, categoriaBD};

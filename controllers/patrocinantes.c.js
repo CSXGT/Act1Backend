@@ -1,37 +1,14 @@
-let patrocinantesBD = [
-    {
-        id:"111",
-        nombre:"Universidad Valle del Momboy",
-    },
-    {
-        id:"222",
-        nombre:"Makroval",
-    },
-    {
-        id:"333",
-        nombre:"Kel",
-    },
-    {
-        id:"444",
-        nombre:"Ávila",
-    },
-    {
-        id:"555",
-        nombre:"Salepoint Software",
-    }
-]
+const {patrocinantesBD} = require("../models/modelos")
 
 class PatrocinantesController {
-    todos() {
+    Mostrar() {
         return patrocinantesBD;
     }
-    uno(id){
 
-    }
     ingresar(patrocinantes){
-        
+        patrocinantesBD.push(patrocinantes);
+        console.log("Se ha creado un patrocinante");
+        return (patrocinantesBD);
     }
 }
-
 module.exports = new PatrocinantesController();
-  
