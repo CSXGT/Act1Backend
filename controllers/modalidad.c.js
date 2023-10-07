@@ -1,23 +1,28 @@
 let modalidadBD = [
     {
-        id:"111",
-        nombre:"sumo",
+        id:"sum1",
+        nombre:"Sumo",
+        categoria_id: 1
     },
     {
-        id:"222",
-        nombre:"IVOO",
+        id:"inc1",
+        nombre:"Incapacidad",
+        categoria_id: 1
     },
     {
-        id:"333",
-        nombre:"Luitronic",
+        id:"seg2",
+        nombre:"Seguidor de Línea",
+        categoria_id: 2
     },
     {
-        id:"444",
-        nombre:"LaPanteraRosa",
+        id:"rec2",
+        nombre:"Recolección de Objetos",
+        categoria_id: 2
     },
     {
-        id:"555",
-        nombre:"Canguro",
+        id:"tos3",
+        nombre:"Tostador de Maíz",
+        categoria_id: 3
     }
 ]
 
@@ -29,7 +34,7 @@ class ModalidadController {
 
     }
     ingresar(modalidad){
-        
+        modalidadBD.push(modalidad);
     }
 }
 

@@ -2,92 +2,110 @@ let equiposBD = [
     {
         id: "001",
         nombre: "TechTitans",
-        categoria: "Robótica Móvil"
+        categoria_id: [1, 2],
+        modalidad_id: ["sum1", "seg2"]
     },
     {
         id: "002",
         nombre: "MechaWarriors",
-        categoria: "Drones Autónomos"
+        categoria_id: [1],
+        modalidad_id: ["sum1", "inc1"]
     },
     {
         id: "003",
         nombre: "CircuitBots",
-        categoria: "Robótica Educativa"
+        categoria_id: [1, 3],
+        modalidad_id: ["sum1", "tos3"]
     },
     {
         id: "004",
         nombre: "NanoTechBots",
-        categoria: "Nanorobótica"
+        categoria_id: [1],
+        modalidad_id: ["sum1"]
     },
     {
         id: "005",
         nombre: "CyberRaptors",
-        categoria: "Robótica de Combate"
+        categoria_id: [1],
+        modalidad_id: ["inc1"]
     },
     {
         id: "006",
         nombre: "AquaBots",
-        categoria: "Robótica Subacuática"
+        categoria_id: [1],
+        modalidad_id: ["inc1"]
     },
     {
         id: "007",
         nombre: "AstroMechs",
-        categoria: "Exploración Espacial"
+        categoria_id: [1,2],
+        modalidad_id: ["inc1", "rec2"]
     },
     {
         id: "008",
         nombre: "CodeCrafters",
-        categoria: "Programación de Robots"
+        categoria_id: [2],
+        modalidad_id: ["seg2"]
     },
     {
         id: "009",
         nombre: "RoboGeniuses",
-        categoria: "Inteligencia Artificial"
+        categoria_id: [2],
+        modalidad_id: ["seg2"]
     },
     {
         id: "010",
         nombre: "TechSavvyBots",
-        categoria: "Robótica Industrial"
+        categoria_id: [2],
+        modalidad_id: ["seg2"]
     },
     {
         id: "011",
         nombre: "BioBots",
-        categoria: "Robótica Biomédica"
+        categoria_id: [2, 3],
+        modalidad_id: ["seg2", "rec2", "tos3"]
     },
     {
         id: "012",
         nombre: "GreenTechBots",
-        categoria: "Robótica Agrícola"
+        categoria_id: [2],
+        modalidad_id: ["rec2"]
     },
     {
         id: "013",
         nombre: "SpaceExplorers",
-        categoria: "Exploración Lunar"
+        categoria_id: [2],
+        modalidad_id: ["rec2"]
     },
     {
         id: "014",
         nombre: "RobotRevolution",
-        categoria: "Innovación Tecnológica"
+        categoria_id: [2],
+        modalidad_id: ["rec2"]
     },
     {
         id: "015",
         nombre: "FutureBuilders",
-        categoria: "Robótica Futurista"
+        categoria_id: [3],
+        modalidad_id: ["tos3"]
     },
     {
         id: "016",
         nombre: "SkyScrapers",
-        categoria: "Robótica de Construcción"
+        categoria_id: 3,
+        modalidad_id: ["tos3"]
     },
     {
         id: "017",
         nombre: "MarsRovers",
-        categoria: "Exploración Marciana"
+        categoria_id: [3],
+        modalidad_id: ["tos3"]
     },
     {
         id: "018",
         nombre: "TechWizards",
-        categoria: "Robótica de Alta Tecnología"
+        categoria_id: [3],
+        modalidad_id: ["tos3"]
     }
 ]
 

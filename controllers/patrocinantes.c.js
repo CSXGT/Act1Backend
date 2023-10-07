@@ -1,23 +1,23 @@
 let patrocinantesBD = [
     {
         id:"111",
-        nombre:"ElectroShop",
+        nombre:"Universidad Valle del Momboy",
     },
     {
         id:"222",
-        nombre:"IVOO",
+        nombre:"Makroval",
     },
     {
         id:"333",
-        nombre:"Luitronic",
+        nombre:"Kel",
     },
     {
         id:"444",
-        nombre:"LaPanteraRosa",
+        nombre:"Ávila",
     },
     {
         id:"555",
-        nombre:"Canguro",
+        nombre:"Salepoint Software",
     }
 ]
 

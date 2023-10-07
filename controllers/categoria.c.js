@@ -1,15 +1,15 @@
 let categoriaBD = [
     {
-        id:"1",
+        id: 1,
         nombre:"Batalla de Robots"
     },
     {
-        id:"2",
-        nombre:"Vehículos autónomos",
+        id: 2,
+        nombre:"Vehículos Autónomos",
     },
     {
-        id:"3",
-        nombre:"Soluciones industriales",
+        id: 3,
+        nombre:"Soluciones Industriales",
     },
 ]
 
