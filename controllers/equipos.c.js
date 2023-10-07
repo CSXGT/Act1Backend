@@ -1,124 +1,61 @@
-let equiposBD = [
-    {
-        id: "001",
-        nombre: "TechTitans",
-        categoria_id: [1, 2],
-        modalidad_id: ["sum1", "seg2"]
-    },
-    {
-        id: "002",
-        nombre: "MechaWarriors",
-        categoria_id: [1],
-        modalidad_id: ["sum1", "inc1"]
-    },
-    {
-        id: "003",
-        nombre: "CircuitBots",
-        categoria_id: [1, 3],
-        modalidad_id: ["sum1", "tos3"]
-    },
-    {
-        id: "004",
-        nombre: "NanoTechBots",
-        categoria_id: [1],
-        modalidad_id: ["sum1"]
-    },
-    {
-        id: "005",
-        nombre: "CyberRaptors",
-        categoria_id: [1],
-        modalidad_id: ["inc1"]
-    },
-    {
-        id: "006",
-        nombre: "AquaBots",
-        categoria_id: [1],
-        modalidad_id: ["inc1"]
-    },
-    {
-        id: "007",
-        nombre: "AstroMechs",
-        categoria_id: [1,2],
-        modalidad_id: ["inc1", "rec2"]
-    },
-    {
-        id: "008",
-        nombre: "CodeCrafters",
-        categoria_id: [2],
-        modalidad_id: ["seg2"]
-    },
-    {
-        id: "009",
-        nombre: "RoboGeniuses",
-        categoria_id: [2],
-        modalidad_id: ["seg2"]
-    },
-    {
-        id: "010",
-        nombre: "TechSavvyBots",
-        categoria_id: [2],
-        modalidad_id: ["seg2"]
-    },
-    {
-        id: "011",
-        nombre: "BioBots",
-        categoria_id: [2, 3],
-        modalidad_id: ["seg2", "rec2", "tos3"]
-    },
-    {
-        id: "012",
-        nombre: "GreenTechBots",
-        categoria_id: [2],
-        modalidad_id: ["rec2"]
-    },
-    {
-        id: "013",
-        nombre: "SpaceExplorers",
-        categoria_id: [2],
-        modalidad_id: ["rec2"]
-    },
-    {
-        id: "014",
-        nombre: "RobotRevolution",
-        categoria_id: [2],
-        modalidad_id: ["rec2"]
-    },
-    {
-        id: "015",
-        nombre: "FutureBuilders",
-        categoria_id: [3],
-        modalidad_id: ["tos3"]
-    },
-    {
-        id: "016",
-        nombre: "SkyScrapers",
-        categoria_id: 3,
-        modalidad_id: ["tos3"]
-    },
-    {
-        id: "017",
-        nombre: "MarsRovers",
-        categoria_id: [3],
-        modalidad_id: ["tos3"]
-    },
-    {
-        id: "018",
-        nombre: "TechWizards",
-        categoria_id: [3],
-        modalidad_id: ["tos3"]
-    }
-]
+const {equiposBD} = require ("../models/models");
 
 class EquiposController {
-    todos() {
-        return equiposBD;
-    }
-    uno(id){
 
+//Para mostrar todos los equipos participantes
+    Mostrar(){
+            return equiposBD;
     }
-    ingresar(equipos){
-        
+
+//Para ingresar un equipo
+    Ingresar(equipo){
+        equiposBD.push(equipo);
+        return (equiposBD);
     }
-}
+
+//Para Buscar Equipos según su id    
+    Buscar(equipo){
+        var id = + equipo;
+        var search = equiposBD.findIndex(u => u.id == id)
+        var res = "El id " + id + " corresponde al equipo " + equiposBD[search].nombre;
+        return(res);
+      }
+
+//Para Buscar los Integrantes de un equipo según su nombre    
+    Buscarint(equipo){
+        var nombre = + equipo;
+        var search = equiposBD.findIndex(u => u.nombre == nombre)
+        var res = "Los integrantes del equipo " + nombre + " son: " + equiposBD[search].integrantes;
+        return(res);
+  }
+
+//Para Modificar los datos de algún equipo  
+Actualizar(equipo , newEquipo){
+        var id = + equipo;
+        var search = equiposBD.findIndex(u => u.id == id)
+        if (search == "-1" ){
+          console.log("El equipo con id " + id + " no existe");
+        }else if(equiposBD[search].id == id){ 
+          console.log("El equipo con id "+ id + "sera actualizado");
+          console.log(equiposBD[search]);
+          equiposBD[search]= newEquipo;
+          console.log("El equipo ha sido actualizado");
+          console.log(equiposBD[search]);
+        }
+      }
+      
+//Para Eliminar un Equipo
+      Eliminar(equipo){
+        var id = + equipo;
+        var search = equiposBD.findIndex(u => u.id == id)
+        if (search == "-1" ){
+          console.log("El equipo con id " + id + " no existe");
+        }else if(equiposBD[search].id == id){
+          console.log("El equipo con id "+ id + " ha sido eliminado ");
+          equiposBD.splice(search,1);
+        }
+      }
+    } 
+
 
 module.exports = new EquiposController();

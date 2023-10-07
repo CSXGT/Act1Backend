@@ -1,21 +1,40 @@
 var express = require('express');
+const app = require('../app.js');
+const equipos = require('../controllers/equipos.c');
 var router = express.Router();
 var EquiposController = require("../controllers/equipos.c");
+const { equiposBD } = require('../models/models.js');
 
-
-// Ruta para listar equipos
+//Mostrar Equipos
 router.get('/', function(req, res, next) {
-  res.send(EquiposController.todos());
+  res.send(EquiposController.Mostrar());
 });
 
-router.get('/equipos/:id', function(req, res, next) {
-  const equipoId = req.params.id;
-  const equipo = equipos.find(e => e.id === equipoId);
-  if (equipo) {
-    res.json(equipo);
-  } else {
-    res.status(404).json({ error: 'Equipo no encontrado' });
-  }
+//Ingresar un Equipo
+router.post('/', function(req, res, next) {
+  const equipo = EquiposController.Ingresar(req.body);
+  res.send(equiposBD);
+});
+
+//Buscar un Equipo según id
+router.get("/:id", function(req, res, next) {
+  res.send(EquiposController.Buscar(req.params.id));
+});
+
+//Buscar Integrantes de un Equipo
+router.get("/:nombre", function(req, res, next) {
+  res.send(EquiposController.Buscarint(req.params.nombre));
+});
+
+//Modificar un Equipo
+router.patch("/:id", function(req, res, next) {
+  res.send(EquiposController.Actualizar(req.params.id , req.body));
+  
+});
+
+//Eliminar un Equipo
+router.delete("/:id", function(req, res, next) {
+  res.send(EquiposController.Eliminar(req.params.id));
 });
 
 module.exports = router;
