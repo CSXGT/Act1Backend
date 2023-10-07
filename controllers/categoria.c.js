@@ -9,35 +9,17 @@ class CategoriaController {
         console.log("Se ha creado una categoria");
         return (categoriaBD);
     }
-    Editar(categoria){
-        app.put('/categorias/:id', (req, res) => {
-            const categoriaId = parseInt(req.params.id);
-            const nuevaNombre = req.body.nombre;
-          
-            // Buscar la categoría por ID
-            const categoria = categorias.find(c => c.id === categoriaId);
-          
-            if (!categoria) {
-              return res.status(404).json({ error: 'Categoría no encontrada' });
-            }
-          
-            // Actualizar el nombre de la categoría
-            categoria.nombre = nuevaNombre;
-          
-            res.json(categoria);
-          });
-    }
-    Editar(categoria){
-        var id = + categoria
-        var search = equipos.findIndex(u => u.id == id)
+    Modificar(categoria , newCategoria){
+        var id = + categoria;
+        var search = categoriaBD.findIndex(u => u.id == id)
         if (search == "-1" ){
-          console.log("El equipo con id " + id + " no existe");
-        }else if(equipos[search].id == id){ 
-          console.log("El equipo con id "+ id + "sera actualizado");
-          console.log(equipos[search]);
-          equipos[search]= newEquipo;
-          console.log("El equipo ha sido actualizado");
-          console.log(equipos[search]);
+          console.log("La categoria con id " + id + " no existe");
+        }else if(categoriaBD[search].id == id){ 
+          console.log("La categoria con id "+ id + "se modificará");
+          console.log(categoriaBD[search]);
+          categoriaBD[search]= newCategoria;
+          console.log("La categoria ha sido modificadA");
+          console.log(categoriaBD[search]);
         }
       }
 }

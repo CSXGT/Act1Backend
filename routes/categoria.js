@@ -18,21 +18,9 @@ router.post('/', function(req, res, next) {
 });
 
 //EDITAR categoria
-router.patch("/:id", function(req, res, next) {
-  res.send(CategoriaController.Actualizar(req.params.id , req.body));
+router.put("/:id", function(req, res, next) {
+  res.send(CategoriaController.Modificar(req.params.id , req.body));
   
 });
-
-//Mostrar
-router.get('/equiposPorCategoria', (req, res) => {
-  const equiposPorCategoria = {};
-
-  categoriaBD.forEach(categoria => {
-      equiposPorCategoria[categoria.nombre] = equiposBD.filter(equipo => equipo.categoria_id.includes(categoria.id));
-  });
-
-  res.json(equiposPorCategoria);
-});
-
 
 module.exports = router;
