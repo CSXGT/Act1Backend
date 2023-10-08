@@ -37,5 +37,4 @@ router.delete("/:id", function(req, res, next) {
   res.send(EquiposController.Eliminar(req.params.id));
 });
 
-
 module.exports = router;

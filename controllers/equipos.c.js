@@ -48,7 +48,6 @@ class EquiposController {
           equiposBD.splice(search,1);
         }
       }
-    } 
+    }
     
-
 module.exports = new EquiposController();
