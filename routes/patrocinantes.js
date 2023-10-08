@@ -3,12 +3,12 @@ var router = express.Router();
 var PatrocinantesController = require("../controllers/patrocinantes.c");
 const { patrocinantesBD } = require('../models/modelos');
 
-/* GET patrocinantes listing. */
+//Mostrar Patrocinantes
 router.get('/', function(req, res, next) {
   res.send(PatrocinantesController.Mostrar());
 });
 
-/* POST patrocinantes */
+//Ingresar Patrocinantes
 router.post('/', function(req, res, next) {
  
   const patrocinantes = PatrocinantesController.ingresar(req.body);

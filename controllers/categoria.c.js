@@ -22,6 +22,17 @@ class CategoriaController {
           console.log(categoriaBD[search]);
         }
       }
+    Eliminar(categoria){
+      var id = + categoria;
+      var search = categoriaBD.findIndex(u => u.id == id)
+      if (search == "-1" ){
+        console.log("La categoría con id " + id + " no existe");
+      }else if(categoriaBD[search].id == id){
+        console.log("La categoría con id "+ id + " ha sido eliminada ");
+        categoriaBD.splice(search,1);
+      }
+    }
 }
+
 
 module.exports = new CategoriaController();

@@ -21,11 +21,6 @@ router.get("/:id", function(req, res, next) {
   res.send(EquiposController.Buscar(req.params.id));
 });
 
-//Buscar Integrantes de un Equipo
-router.get("/:nombre", function(req, res, next) {
-  res.send(EquiposController.Buscarint(req.params.nombre));
-});
-
 //Modificar un Equipo
 router.put("/:id", function(req, res, next) {
   res.send(EquiposController.Modificar(req.params.id , req.body));
